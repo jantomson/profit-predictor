@@ -171,7 +171,7 @@ function Card({ offer, onChange, onRemove, isBest }: CardProps) {
       )}
 
       {/* Header */}
-      <div style={{ padding: "20px 18px 14px", display: "flex", alignItems: "center", gap: 10, borderBottom: "1px solid #1c1c28" }}>
+      <div style={{ padding: "20px 18px 14px", marginTop: "16px", display: "flex", alignItems: "center", gap: 10, borderBottom: "1px solid #1c1c28" }}>
         <input
           value={offer.name}
           onChange={(e) => onChange({ ...offer, name: e.target.value })}
@@ -180,7 +180,7 @@ function Card({ offer, onChange, onRemove, isBest }: CardProps) {
         {onRemove && (
           <button
             onClick={onRemove}
-            style={{ background: "#220f0f", border: "1px solid #3a1515", borderRadius: 8, color: "#ff4444", fontSize: 12, fontWeight: 700, padding: "7px 14px", cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", gap: 5, whiteSpace: "nowrap" }}
+            style={{ background: "#220f0f", border: "1px solid #3a1515", borderRadius: 8, color: "#ff4444", fontSize: 8, fontWeight: 700, padding: "7px 14px", cursor: "pointer", fontFamily: "inherit", display: "flex", alignItems: "center", gap: 5, whiteSpace: "nowrap"}}
           >
             <span>✕</span> Remove
           </button>
@@ -293,7 +293,7 @@ function GeoTab({ offers, onUpdateOffer }: GeoTabProps) {
           return (
             <div
               key={m.geo.id}
-              style={{ background: "#14141e", border: `2px solid ${isBest ? s.color : "#242430"}`, borderRadius: 14, padding: 18, minWidth: 190, boxShadow: isBest ? `0 0 28px ${s.color}22` : "none", position: "relative", transition: "border-color 0.3s" }}
+              style={{ background: "#14141e", border: `2px solid ${isBest ? s.color : "#242430"}`, borderRadius: 14, padding: 10, minWidth: 190, boxShadow: isBest ? `0 0 28px ${s.color}22` : "none", position: "relative", transition: "border-color 0.3s" }}
             >
               {isBest && (
                 <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", background: s.color, color: "#030a06", fontSize: 9, fontWeight: 800, padding: "2px 14px", borderRadius: "0 0 8px 8px", letterSpacing: "0.18em" }}>
